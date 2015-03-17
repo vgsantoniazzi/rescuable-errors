@@ -1,4 +1,7 @@
+ENV["RAILS_ENV"] = 'test'
+
 require 'simplecov'
+require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 
 module SimpleCov::Configuration
   def clean_filters
@@ -17,13 +20,12 @@ end
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'rspec'
-require 'rescuable-errors'
+require 'rspec/rails'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-
+  config.infer_spec_type_from_file_location!
 end

@@ -1,0 +1,4 @@
+"pt-BR":
+  errors:
+    unauthenticated: As suas informações de autenticação não estão corretas.
+    routing: A rota solicitada não foi encontrada.
