@@ -13,8 +13,8 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  gem.name = "rescuable-errors"
-  gem.homepage = "http://bitbucket.com/bradoc/rescuable-errors"
+  gem.name = "rescuable_errors"
+  gem.homepage = "http://bitbucket.com/bradoc/rescuable_errors"
   gem.license = "MIT"
   gem.summary = %Q{Rescuable Gem for ecodoc application}
   gem.description = %Q{Rescuable Gem for ecodoc application}
