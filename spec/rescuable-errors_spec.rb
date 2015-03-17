@@ -7,7 +7,7 @@ describe "RescuableErrors", type: :request do
       expect(JSON.parse(response.body)).to eq(
         "error" => {
           "code" => 401,
-          "class" => "UnauthenticatedError",
+          "class" => "RescuableErrors::UnauthenticatedError",
           "message" => "As suas informações de autenticação não estão corretas."
         }
       )
@@ -20,7 +20,7 @@ describe "RescuableErrors", type: :request do
       expect(JSON.parse(response.body)).to eq(
         "error" => {
           "code" => 404,
-          "class" => "RoutingError",
+          "class" => "RescuableErrors::RoutingError",
           "message" => "As suas informações de autenticação não estão corretas."
         }
       )
@@ -33,7 +33,7 @@ describe "RescuableErrors", type: :request do
       expect(JSON.parse(response.body)).to eq(
         "error" => {
           "code" => 400,
-          "class" => "ModelValidationError",
+          "class" => "RescuableErrors::ModelValidationError",
           "message"=>{
             "name"=>["can't be empty"]
           }
