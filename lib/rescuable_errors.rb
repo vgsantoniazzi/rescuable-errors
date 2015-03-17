@@ -1,7 +1,8 @@
-require_relative '../rescuable_errors/errors/application_error.rb'
-require_relative '../rescuable_errors/errors/model_validation_error.rb'
-require_relative '../rescuable_errors/errors/unauthenticated_error.rb'
-require_relative '../rescuable_errors/errors/routing_error.rb'
+require_relative './engine.rb'
+require_relative '../lib/rescuable_errors/application_error.rb'
+require_relative '../lib/rescuable_errors/model_validation_error.rb'
+require_relative '../lib/rescuable_errors/unauthenticated_error.rb'
+require_relative '../lib/rescuable_errors/routing_error.rb'
 
 module RescuableErrors
   extend ActiveSupport::Concern
