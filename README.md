@@ -26,3 +26,23 @@ Por default, quando a gem é instalada, o locale também é carregado na aplica�
 # Testes
 
 É adicionado um caso de teste dentro de `rescuable_errors_spec.rb`, uma rota no routes.rb apontando para `UsersController`. Esse controller obrigatoriamente lança o erro desejato e a saida do mesmo deve ser validada. Como outros exemplos dentro de `spec/rescuable_errors_spec.rb`
+
+# Classes existentes
+
+## Validação de modelo
+
+```ModelValidationError(@model.errors)```
+
+Classe reponsável por renderizar todos os erros de um model ao criar e/ou atualizar.
+
+## Rotas
+
+```RoutingError.new```
+
+Classe que retorna um json contendo os erros de rota não encontrada
+
+## Autenticação
+
+```UnauthenticatedError.new```
+
+Classe de erro responsável por lançar um erro de usuário não autenticado.
