@@ -21,7 +21,7 @@ describe "RescuableErrors", type: :request do
         "error" => {
           "code" => 404,
           "class" => "RescuableErrors::RoutingError",
-          "message" => "As suas informações de autenticação não estão corretas."
+          "message" => "A rota solicitada não foi encontrada."
         }
       )
     end
