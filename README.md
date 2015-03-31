@@ -2,6 +2,15 @@
 
 Rescue correctly your application erros.
 
+# Install
+
+Install from rubygems
+
+`gem 'rescuable_errors``
+
+or from github:
+
+`gem 'rescuable_errors', git: 'git@github.com:vgsantoniazzi/rescuable-errors.git'`
 
 # Create new error classes
 
