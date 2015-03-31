@@ -11,6 +11,7 @@ describe "RescuableErrors", type: :request do
           "message" => "As suas informações de autenticação não estão corretas."
         }
       )
+      expect(response.status).to eq(401)
     end
   end
 
@@ -24,6 +25,7 @@ describe "RescuableErrors", type: :request do
           "message" => "A rota solicitada não foi encontrada."
         }
       )
+      expect(response.status).to eq(404)
     end
   end
 
@@ -39,6 +41,7 @@ describe "RescuableErrors", type: :request do
           }
         }
       )
+      expect(response.status).to eq(400)
     end
   end
 end
