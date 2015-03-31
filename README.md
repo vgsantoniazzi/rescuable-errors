@@ -2,7 +2,10 @@
 
 Rescue correctly your application erros.
 
+
 # Create new error classes
+
+Follow spec/dummy/app/errors or example below
 
 You can create errors into gem or in your application. Create errors/routing_error.rb in your application:
 
@@ -11,6 +14,7 @@ module RescuableErrors
   class RoutingError < RescuableErrors::ApplicationError
     def initialize
       @code = 404
+      @status = 404
       @class = "RescuableErrors::RoutingError"
       super I18n.t("errors.routing")
     end
@@ -19,7 +23,7 @@ end
 
 ```
 
-and fail in controller with ```fail RescuableErrors.new```. Now will automaticaly render a JSON response with status 404:
+and fail in controller with ```fail RescuableErrors::RoutingError.new```. Now will automaticaly render a JSON response with status 404:
 ```
 "error": {
   "code": 404,

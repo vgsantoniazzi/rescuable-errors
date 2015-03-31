@@ -1,8 +1,5 @@
 require_relative './engine.rb'
-require_relative '../lib/rescuable_errors/application_error.rb'
-require_relative '../lib/rescuable_errors/model_validation_error.rb'
-require_relative '../lib/rescuable_errors/unauthenticated_error.rb'
-require_relative '../lib/rescuable_errors/routing_error.rb'
+Dir[File.dirname(__FILE__) + '/rescuable_errors/**/*.rb'].each {|file| require file }
 
 module RescuableErrors
   extend ActiveSupport::Concern
@@ -13,7 +10,7 @@ module RescuableErrors
         error: {
           code: e.code, class: e.class, message: parse(e.message)
         }
-      }, status: e.code
+      }, status: e.status
     end
 
     def parse(response)
