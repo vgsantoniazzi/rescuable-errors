@@ -6,13 +6,13 @@ Rescue correctly your application errors.
 
 From command line:
 
-```
+```ruby
 gem install rescuable_errors
 ```
 
 Gemfile:
 
-```
+```ruby
 gem "rescuable_errors"
 ```
 
@@ -20,7 +20,7 @@ gem "rescuable_errors"
 
 You can create errors into gem (if you use a fork) or in your application. For example, create app/errors/routing_error.rb in your application:
 
-```
+```ruby
 module RescuableErrors
   class RoutingError < RescuableErrors::ApplicationError
     def initialize
@@ -40,7 +40,7 @@ and fail in controller with
 
 Now will automaticaly render a JSON response with status 404:
 
-```
+```ruby
 "error": {
   "code": 404,
   "class": "RescuableErrors::RoutingError",
