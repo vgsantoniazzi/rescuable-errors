@@ -1,22 +1,24 @@
-# RescuableErrors
+## Welcome to Rescuable Errors
 
-Rescue correctly your application erros.
+Rescue correctly your application errors.
 
-# Install
+## Getting Started
 
-Install from rubygems
+From command line:
 
-`gem 'rescuable_errors``
+```
+gem install rescuable_errors
+```
 
-or from github:
+Gemfile:
 
-`gem 'rescuable_errors', git: 'git@github.com:vgsantoniazzi/rescuable-errors.git'`
+```
+gem "rescuable_errors"
+```
 
-# Create new error classes
+## Usage
 
-Follow spec/dummy/app/errors or example below
-
-You can create errors into gem or in your application. Create errors/routing_error.rb in your application:
+You can create errors into gem (if you use a fork) or in your application. For example, create app/errors/routing_error.rb in your application:
 
 ```
 module RescuableErrors
@@ -32,7 +34,12 @@ end
 
 ```
 
-and fail in controller with ```fail RescuableErrors::RoutingError.new```. Now will automaticaly render a JSON response with status 404:
+and fail in controller with 
+
+```fail RescuableErrors::RoutingError.new```. 
+
+Now will automaticaly render a JSON response with status 404:
+
 ```
 "error": {
   "code": 404,
@@ -41,6 +48,14 @@ and fail in controller with ```fail RescuableErrors::RoutingError.new```. Now wi
 }
 ```
 
-# Tests
+## Contributing
 
-In rescuable_errors_spec has some tests. Just copy to your tests. In `spec/dummy` has an application with all detais that how to use this lib
+I :heart: Open source!
+
+[Follow github guides for forking a project](https://guides.github.com/activities/forking/)
+
+[Follow github guides for contributing open source](https://guides.github.com/activities/contributing-to-open-source/#contributing)
+
+## License
+
+Gem is released under the [MIT license](http://opensource.org/licenses/MIT).
