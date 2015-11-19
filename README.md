@@ -56,6 +56,10 @@ I :heart: Open source!
 
 [Follow github guides for contributing open source](https://guides.github.com/activities/contributing-to-open-source/#contributing)
 
+## Code Status
+
+[![Build Status](https://travis-ci.org/vgsantoniazzi/rescuable-errors.svg?branch=master)](https://travis-ci.org/vgsantoniazzi/rescuable-errors)
+
 ## License
 
 Gem is released under the [MIT license](http://opensource.org/licenses/MIT).
